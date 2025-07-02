@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { animateVehicles } from "./animation";
 import { Camera } from "./camera";
 import { map } from "./map";
 import { player } from "./player";
@@ -19,4 +20,10 @@ const camera = Camera();
 player.add(camera);
 
 const renderer = Renderer();
-renderer.render(scene, camera);
+renderer.setAnimationLoop(animate);
+
+function animate() {
+  animateVehicles();
+
+  renderer.render(scene, camera);
+}
