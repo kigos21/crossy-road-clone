@@ -6,6 +6,7 @@ import { hitTest } from "./hitDetection";
 import { map } from "./map";
 import { player } from "./player";
 import { Renderer } from "./renderer";
+import "./style.css";
 
 const scene = new THREE.Scene();
 scene.add(player);
