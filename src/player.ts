@@ -12,8 +12,16 @@ function Player() {
     new THREE.MeshLambertMaterial({ color: "white" })
   );
 
+  const comb = new THREE.Mesh(
+    new THREE.BoxGeometry(5, 5, 4),
+    new THREE.MeshLambertMaterial({ color: "red" })
+  );
+
   body.position.z = 10;
   player.add(body);
+
+  comb.position.z = 22;
+  player.add(comb);
 
   return player;
 }

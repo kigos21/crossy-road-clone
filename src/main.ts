@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { animatePlayer, animateVehicles } from "./animation";
 import { Camera } from "./camera";
 import "./collectUserInput";
+import { hitTest } from "./hitDetection";
 import { map } from "./map";
 import { player } from "./player";
 import { Renderer } from "./renderer";
@@ -26,6 +27,7 @@ renderer.setAnimationLoop(animate);
 function animate() {
   animateVehicles();
   animatePlayer();
+  hitTest();
 
   renderer.render(scene, camera);
 }

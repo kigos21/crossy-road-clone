@@ -65,4 +65,5 @@ function setPosition(progress: number) {
   player.position.x = THREE.MathUtils.lerp(startX, endX, progress);
   player.position.y = THREE.MathUtils.lerp(startY, endY, progress);
   player.children[0].position.z = Math.sin(progress * Math.PI) * 8 + 10;
+  player.children[1].position.z = Math.sin(progress * Math.PI) * 8 + 22;
 }
