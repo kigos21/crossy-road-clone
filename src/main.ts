@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { animateVehicles } from "./animation";
 import { Camera } from "./camera";
+import "./collectUserInput";
 import { map } from "./map";
 import { player } from "./player";
 import { Renderer } from "./renderer";
